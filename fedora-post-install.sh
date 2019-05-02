@@ -14,6 +14,3 @@ chsh -s `which fish`
 
 # install video codecs
 sudo dnf install -y compat-ffmpeg28 ffmpeg-libs
-
-# set caps lock key to ctrl
-setxkbmap -option caps:ctrl_modifier
