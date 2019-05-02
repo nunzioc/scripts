@@ -9,8 +9,11 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 # install linux utils
 sudo dnf install -y util-linux-user
 
+# enable kakoune repo
+dnf copr enable jkonency/kakoune
+
 # install software
-sudo dnf install -y fish qutebrowser fzf ranger steam vim
+sudo dnf install -y fish kakoune qutebrowser fzf ranger steam vim
 
 # set fish as default shell
 chsh -s `which fish`
