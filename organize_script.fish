@@ -1,4 +1,6 @@
 #! /usr/bin/fish
+# go to iawriter folder
+cd /home/ncicone/Sync/IAWriter
 
 # gets todays tasks from schedule and adds them to a file called today_tasks
 set todayTasks (awk -v date=(date +"%b %d") '$1 != "-" { today="false" } today == "true" { print } $1 " " $2 == date { today="true"  }' Schedule.md) 

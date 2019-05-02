@@ -6,9 +6,8 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 # install linux utils
 sudo dnf install -y util-linux-user
 
-# install fish shell
-sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/shells:fish:release:3/Fedora_29/shells:fish:release:3.repo
-sudo dnf install -y fish
+# install software
+sudo dnf install -y fish qutebrowser fzf ranger steam
 
 # set fish as default shell
 chsh -s `which fish`
