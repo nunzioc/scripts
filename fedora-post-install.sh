@@ -13,7 +13,7 @@ sudo dnf install -y util-linux-user
 dnf copr enable jkonency/kakoune
 
 # install software
-sudo dnf install -y fish kakoune qutebrowser fzf ranger steam vim
+sudo dnf install -y fish kakoune qutebrowser fzf ranger steam vim tmux tmuxinator
 
 # set fish as default shell
 chsh -s `which fish`
