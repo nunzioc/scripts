@@ -21,6 +21,15 @@ chsh -s `which fish`
 # install video codecs
 sudo dnf install -y compat-ffmpeg28 ffmpeg-libs
 
+# set up copy paste
+sudo dnf install -y wayland-devel meson
+git clone https://github.com/bugaevc/wl-clipboard.git
+cd wl-clipboard
+meson build
+cd build
+ninja
+sudo install ninja
+
 # set up configs
 mkdir .configrepo
 git clone https://github.com/nunzioc/config.git ~/.configrepo
