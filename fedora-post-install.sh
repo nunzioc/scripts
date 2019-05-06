@@ -21,7 +21,10 @@ chsh -s `which fish`
 # install video codecs
 sudo dnf install -y compat-ffmpeg28 ffmpeg-libs
 
+# set up source
+mkdir source
 # set up copy paste
+cd source
 sudo dnf install -y wayland-devel meson
 git clone https://github.com/bugaevc/wl-clipboard.git
 cd wl-clipboard
@@ -29,6 +32,12 @@ meson build
 cd build
 ninja
 sudo install ninja
+cd ~
+
+# install z.lua
+cd source
+git clone https://github.com/skywind3000/z.lua.git
+cd ~
 
 # set up configs
 mkdir .configrepo
