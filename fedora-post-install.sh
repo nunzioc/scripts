@@ -9,11 +9,8 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 # install linux utils
 sudo dnf install -y util-linux-user
 
-# enable kakoune repo
-dnf copr enable jkonency/kakoune
-
 # install software
-sudo dnf install -y fish kakoune qutebrowser fzf ranger steam vim tmux tmuxinator
+sudo dnf install -y fish fzf ranger steam vim tmux tmuxinator
 
 # set fish as default shell
 chsh -s `which fish`
@@ -34,13 +31,8 @@ ninja
 sudo install ninja
 cd ~
 
-# install z.lua
-cd source
-git clone https://github.com/skywind3000/z.lua.git
-cd ~
-
 # set up configs
 mkdir .configrepo
-git clone https://github.com/nunzioc/config.git ~/.configrepo
+git clone --bare https://github.com/nunzioc/config.git ~/.configrepo
 alias config='/usr/bin/git --git-dir=$HOME/.configrepo/ --work-tree=$HOME'
-config checkout -f
+config checkout 
